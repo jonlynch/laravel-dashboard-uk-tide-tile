@@ -1,0 +1,12 @@
+{
+    "name": "jonlynch/tidetile",
+    "description": "A Laravel dashboard tile for UK tides",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jon",
+            "email": "jon.lynch@ymail.com"
+        }
+    ],
+    "require": {}
+}
