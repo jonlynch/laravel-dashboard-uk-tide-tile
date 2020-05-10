@@ -11,7 +11,7 @@ class TideTileServiceProvider extends ServiceProvider
  
     public function boot()
     {
-        Livewire::component('tide-tile', TideTileComponent::class);
+        Livewire::component('uk-tide-tile', TideTileComponent::class);
 
         if ($this->app->runningInConsole()) {
             $this->commands([

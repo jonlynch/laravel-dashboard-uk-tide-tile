@@ -1,14 +1,14 @@
 <x-dashboard-tile :position="$position">
     <div wire:poll.60s
-        class="grid grid-rows-5 gap-2 justify-items-center h-full text-center"
+         class="justify-items-center h-full text-center"
     >
-        <h1 class="font-medium text-dimmed text-sm uppercase tracking-wide">
+        <h1 class="font-medium text-dimmed text-sm uppercase tracking-wide pb-2">
             {{$location}} Tides &mdash; {{\Carbon\Carbon::now()->toFormattedDateString()}}
         </h1>
+        <div class="grid grid-rows-4 gap-2">
         @foreach ($tides as $tide)
             <?php 
             $time = \Carbon\Carbon::createFromTimeStamp(strtotime($tide['dateTime']))
-                                    ->setTimezone('Europe/London');
             ?>
 
             <div class="text-base tracking-wide">
@@ -25,5 +25,6 @@
                 </div>
             </div>
         @endforeach
+        </div>
     </div>
 </x-dashboard-tile>
