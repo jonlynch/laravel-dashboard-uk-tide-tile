@@ -10,12 +10,12 @@ A package to show UK tide information on [the Laravel Dashboard](https://docs.sp
 You can install the package via composer:
 
 ```bash
-$ composer require jonlynch/laravel-dashboard-uk-weather-tile
+$ composer require jonlynch/laravel-dashboard-uk-tide-tile
 ```
 
 ## Usage
 
-In your dashboard view you use the `livewire:uk-tide-tile` component. You may add more than one weather forecast by adding more locations.
+In your dashboard view you use the `livewire:uk-tide-tile` component.
 
 ```html
 <x-dashboard>
@@ -39,7 +39,7 @@ return [
     ]
 ```
 
-In app\Console\Kernel.php you should schedule the JonLynch\UkWeatherTile\Commands\FetchMetOfficeDataCommand to run every 30 minutes.
+In app\Console\Kernel.php you should schedule the JonLynch\TideTile\Commands\FetchMetOfficeDataCommand to run every hour.
 
 ``` php
 // in app\Console\Kernel.php
